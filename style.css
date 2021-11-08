@@ -2,9 +2,13 @@ div {
     /* background-color: greenyellow; */
     /* border: 1px solid black; */
     display: flex;
+    flex-wrap: wrap;
     margin: 20px;
 }
 
 div i {
     font-size: 40px;
+}
+.green {
+    color: green;
 }

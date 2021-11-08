@@ -3,16 +3,13 @@
 
 // Milestone 2
 // Ciascuna icona ha una proprietà “color”: utilizzare questa proprietà per visualizzare le icone del colore corrispondente.
-// Consigli del giorno
-// Come sempre, iniziamo prima di tutto dall’analisi e comprensione della consegna.
-// Scomponiamo il problema in micro-passaggi logici che solamente in un secondo momento trasformeremo in codice.
-
 
 // Bonus:
 // Milestone 3
 // Aggiungere alla pagina una select in cui le options corrispondono ai vari tipi di icone (animal, vegetable, user). Quando l’utente seleziona un tipo dalla select, visualizzare solamente le icone corrispondenti.
 // (Qui quale potrebbe essere l’evento che mi serve?..)
 const iconCont = document.getElementById("container");
+
 
 const iconsArr =[
 	{
@@ -132,16 +129,32 @@ const iconsArr =[
 
 // unisco gli attributi per comporre la stringa come su font awesome
 iconsArr.forEach(element => {
+
 	let iconBox =document.createElement("div");
 	console.log(iconBox);
 
-	let icon =`<i class = "${element.family} ${element.prefix}${element.name}"</i>`;
+	let icon =`<i class = "${element.family} ${element.prefix}${element.name}"</i>
+	${element.name}`;
+	
 	console.log(icon);
 	
-	iconBox.innerHTML = icon; //come mai non funziona con append?
 	iconCont.append(iconBox);
-
+	iconBox.innerHTML = icon; //come mai non funziona con append?
 
 
 });
+const verdure = [];
+const vegetables = iconsArr.map((element) => {
+	if (element.color === "green") {
+		verdure.push(element);
+		
+	}
+}
+);
+
+
+
+
+
+
 
