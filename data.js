@@ -129,28 +129,14 @@ const iconsArr =[
 
 // unisco gli attributi per comporre la stringa come su font awesome
 iconsArr.forEach(element => {
-
 	let iconBox =document.createElement("div");
-	console.log(iconBox);
 
-	let icon =`<i class = "${element.family} ${element.prefix}${element.name}"</i>
+	let icon =`<i class = "${element.color} ${element.family} ${element.prefix}${element.name}"</i>
 	${element.name}`;
 	
-	console.log(icon);
-	
-	iconCont.append(iconBox);
 	iconBox.innerHTML = icon; //come mai non funziona con append?
-
-
+	iconCont.appendChild(iconBox);
 });
-const verdure = [];
-const vegetables = iconsArr.map((element) => {
-	if (element.color === "green") {
-		verdure.push(element);
-		
-	}
-}
-);
 
 
 
