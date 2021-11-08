@@ -130,13 +130,22 @@ const iconsArr =[
 // unisco gli attributi per comporre la stringa come su font awesome
 iconsArr.forEach(element => {
 	let iconBox =document.createElement("div");
-
-	let icon =`<i class = "${element.color} ${element.family} ${element.prefix}${element.name}"</i>
-	${element.name}`;
+	let textBox = document.createElement("span");
 	
-	iconBox.innerHTML = icon; //come mai non funziona con append?
+	textBox.append(element.name);
+	console.log(iconBox);
+
+	let icon =`<i class = "${element.color} ${element.family} ${element.prefix}${element.name}"</i>`;
+
+	
+	iconBox.innerHTML += icon; //come mai non funziona con append?
 	iconCont.appendChild(iconBox);
+	iconBox.append(textBox);
+
+	
 });
+
+
 
 
 
