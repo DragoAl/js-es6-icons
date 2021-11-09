@@ -9,8 +9,8 @@
 // Aggiungere alla pagina una select in cui le options corrispondono ai vari tipi di icone (animal, vegetable, user). Quando l’utente seleziona un tipo dalla select, visualizzare solamente le icone corrispondenti.
 // (Qui quale potrebbe essere l’evento che mi serve?..)
 const iconCont = document.getElementById("container");
-
-
+const selectMenu = document.getElementById("menu");
+const iconType = 'type';
 const iconsArr =[
 	{
 		name: 'cat',
@@ -144,6 +144,8 @@ iconsArr.forEach(element => {
 
 	
 });
+
+
 
 
 

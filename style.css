@@ -46,3 +46,7 @@ span {
 .orange {
     color: orange;
 }
+
+.hidden {
+ display: none;
+}
