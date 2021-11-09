@@ -8,9 +8,10 @@
 // Milestone 3
 // Aggiungere alla pagina una select in cui le options corrispondono ai vari tipi di icone (animal, vegetable, user). Quando l’utente seleziona un tipo dalla select, visualizzare solamente le icone corrispondenti.
 // (Qui quale potrebbe essere l’evento che mi serve?..)
+
 const iconCont = document.getElementById("container");
 const selectMenu = document.getElementById("menu");
-const iconType = 'type';
+
 const iconsArr =[
 	{
 		name: 'cat',
@@ -136,12 +137,11 @@ iconsArr.forEach(element => {
 
 	let icon =`<i class = "${element.color} ${element.family} ${element.prefix}${element.name}"</i>`;
 
-	
 	iconBox.innerHTML += icon; //come mai non funziona con append?
 	iconCont.appendChild(iconBox);
 	iconBox.append(textBox);
 
-
+	// menu select
 	selectMenu.addEventListener('change', () => {
 		iconBox.classList.remove("hidden");
 
@@ -152,16 +152,10 @@ iconsArr.forEach(element => {
 			iconBox.classList.add("hidden");
 		}	
 
-	}
-	);
-	
-
+	});
 	
 });
-// for( let key in iconsArr) {
-// 	console.log(iconsArr[key]);
 
-// }
 
 
 
