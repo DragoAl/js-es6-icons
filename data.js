@@ -133,7 +133,6 @@ iconsArr.forEach(element => {
 	let textBox = document.createElement("span");
 	
 	textBox.append(element.name);
-	console.log(iconBox);
 
 	let icon =`<i class = "${element.color} ${element.family} ${element.prefix}${element.name}"</i>`;
 
@@ -142,8 +141,28 @@ iconsArr.forEach(element => {
 	iconCont.appendChild(iconBox);
 	iconBox.append(textBox);
 
+
+	selectMenu.addEventListener('change', () => {
+		iconBox.classList.remove("hidden");
+
+		if (selectMenu.value == "all") {
+			iconBox.classList.remove("hidden");
+
+		} else if (selectMenu.value != element.type ) {
+			iconBox.classList.add("hidden");
+		}	
+
+	}
+	);
+	
+
 	
 });
+// for( let key in iconsArr) {
+// 	console.log(iconsArr[key]);
+
+// }
+
 
 
 
